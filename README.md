@@ -4,9 +4,12 @@ This repository documents the procedure of converting the hydrogen dataset into 
 ## Environment Set Up
 Before executing the script from this repository, ensure you've installed the following packages. Also, note that the script has only been run on Python 3.12.0
 ```
-ase==3.22.1
-h5py==3.10.0
-numpy==1.26.0
+ase == 3.22.1
+h5py == 3.10.0
+numpy == 1.26.0
+matplotlib == 3.8.0
+ipywidgets == 8.1.1
+pythreejs == 2.4.2
 ```
 ## Dataset Download
 You can obtain the dataset from yt-hub at [this link](https://girder.hub.yt/#folder/5e6d2a7168085e00018c9088). The complete dataset comprises 1594 files.
