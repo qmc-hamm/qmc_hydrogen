@@ -1,17 +1,30 @@
 # qmc_hydrogen
-This repository documents the procedure of converting the hydrogen dataset into the HDF5 format.
+This repository documents the procedure of converting the [hydrogen dataset](https://qmc-hamm.hub.yt/data.html) into the HDF5 format.
 
 ## Environment Set Up
-Before executing the script from this repository, ensure you've installed the following packages. Also, note that the script has only been run on Python 3.12.0
+Before executing the script from this repository, ensure you've installed the following packages. Additionally, you need install jupyterlab. 
 ```
-ase == 3.22.1
-h5py == 3.10.0
-numpy == 1.26.0
-matplotlib == 3.8.0
-ipywidgets == 8.1.1
-pythreejs == 2.4.2
+pip install -r requirements.txt
 ```
-## Dataset Download
+Note: the script has only been run on Python 3.12.0
+
+## Dataset
+### Girder
+Install Girder-Client
+```
+pip install girder-client
+```
+Get a yt-hub API <br>
+You need to register an account on [yt-hub](https://girder.hub.yt/#users?dialog=register) and then you can login to create a key under API keys under "My Account"
+
+Pull [QMC Dataset](https://girder.hub.yt/#folder/5e6d2a7168085e00018c9088) from yt-hub<br>
+```
+girder-client --api-url https://girder.hub.yt/api/v1 --api-key YOUR_KEY download GirderFolderId LocalTargetFolder
+```
+Note: Here GirderFolderId=5e6d2a7168085e00018c9088, which can be extracted from the QMC Dataset Link and LocalTargetFolder is dataset
+
+
+### Mannually Download
 You can obtain the dataset from yt-hub at [this link](https://girder.hub.yt/#folder/5e6d2a7168085e00018c9088). The complete dataset comprises 1594 files.
 
 ## HDF5 Structure
